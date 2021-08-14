@@ -3,6 +3,8 @@
 Use the GNU Make tool to create a language C project
 Use the following toolchain to create and compile this project
 
+[繁體中文](./Readme.md)[English](./Readme_EN.md)
+
 ## Tool version and environmental records
 - GNU Make - 4.2.1
 - GCC - 8.1.0
@@ -26,3 +28,7 @@ Use the following toolchain to create and compile this project
      Press `F5` under the code page
 2. Under Terminal, gdb <filename>.exe command
      > The exe file is the extension of the windows executable file. If the operating system is different, please change the extension by yourself
+
+## Todo List
+1. Added make doxygen function to automatically create program description files
+2. Added latex compilation function to create doxygen documents into pdf files

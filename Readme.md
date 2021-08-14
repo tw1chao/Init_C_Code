@@ -3,6 +3,8 @@
 使用 GNU Make 工具，建立 C 語言專案
 使用以下工具鏈建立並編譯此專案
 
+[Traditional Chinese](./Readme.md)[English](./Readme_EN.md)
+
 ## 工具版本及環境紀錄
 
 - GNU Make - 4.2.1
@@ -28,3 +30,6 @@
 2. 在 Terminal 下 gdb <filename>.exe 命令
     > exe 檔 為 windows 執行檔副檔名，若不同作業系統請自行更換副檔名
 
+## 預計新增功能
+1. 新增 make doxygen 功能，自動建立程式說明文件
+2. 新增 latex 編譯功能，將 doxygen 文件建立成 pdf 檔案
