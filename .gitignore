@@ -1,3 +1,4 @@
 
 # Project Build file (hex,bin...etc)
 /build
+/.vscode/settings.json

@@ -24,12 +24,12 @@ extern "C" {
 #include <stdio.h>
 #include <stdint.h>
 #include <stdlib.h>
+#include <stdbool.h>
 #include <math.h>
 
 /* Function define ------------------------------------------------------------*/
 float L11_to_float(uint16_t input_val);
 uint16_t float_to_L11(float input_val);
-
 
 #ifdef __cplusplus
 }

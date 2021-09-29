@@ -5,7 +5,6 @@
 	******************************************************************************
 	*/
 
-
 #include "main.h"
 
 /**
@@ -26,7 +25,7 @@ float L11_to_float(uint16_t input_val)
 	if( mantissa > 0x03FF ) mantissa |= 0xF800;
 
 	// compute value as mantissa * 2^(exponent)
-	return mantissa * pow(2,exponent);
+	return mantissa * pow(2.0,exponent);
 }
 
 
@@ -61,5 +60,5 @@ uint16_t float_to_L11(float input_val)
 
 
 
-/************************ (C) COPYRIGHT YingChao,Chen *****END OF FILE****/
+/************************ ADI Application Note AN135F.PDF *****END OF FILE****/
 

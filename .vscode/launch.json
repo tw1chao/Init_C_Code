@@ -8,14 +8,13 @@
             "name": "gdb - 建置及偵錯使用中的檔案",
             "type": "cppdbg",
             "request": "launch",
-            "program": "${workspaceRoot}\\build\\test_project.exe",
+            "program": "${workspaceRoot}\\build\\main.run",
             "args": [],
             "stopAtEntry": false,
             "cwd": "${workspaceRoot}",
             "environment": [],
             "externalConsole": false,
             "MIMode": "gdb",
-            "miDebuggerPath": "C:\\Program Files\\mingw-w64\\x86_64-8.1.0-win32-seh-rt_v6-rev0\\mingw64\\bin\\gdb.exe",
             "setupCommands": [
                 {
                     "description": "啟用 gdb 的美化顯示",
@@ -23,7 +22,7 @@
                     "ignoreFailures": true
                 }
             ],
-            "preLaunchTask": "C/C++: gcc.exe 建置使用中檔案"
+            "preLaunchTask": "C/C++: gcc 建置使用中檔案"
         }
     ]
 }

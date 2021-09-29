@@ -12,7 +12,9 @@
 ######################################
 # target
 ######################################
-TARGET = test_project
+TARGET = template_project
+
+Executable = run			# executable file name
 
 ######################################
 # building variables
@@ -92,12 +94,12 @@ CFLAGS += -MMD -MP -MF"$(@:%.o=%.d)"
 #######################################
 
 # libraries
-LIBS = -lc -lm -lnosys
+LIBS = -lc -lm
 LIBDIR =
-LDFLAGS = 
+LDFLAGS = $(LIBDIR) $(LIBS) -Wl,-Map=$(BUILD_DIR)/$(TARGET).map,--cref -Wl,--gc-sections
 
 # default action: build all
-all: $(BUILD_DIR)/$(TARGET).exe
+all: $(BUILD_DIR)/$(TARGET).$(Executable) # 執行檔附檔名 (自行變更)
 
 #######################################
 # build the application
@@ -117,7 +119,7 @@ $(BUILD_DIR)/%.o: %.s Makefile | $(BUILD_DIR)
 	@echo "    CC      "$@
 	@$(AS) -c $(CFLAGS) $< -o $@
 
-$(BUILD_DIR)/$(TARGET).exe: $(OBJECTS) Makefile
+$(BUILD_DIR)/$(TARGET).$(Executable): $(OBJECTS) Makefile
 	@echo "    CC      "$@
 	@$(CC) $(OBJECTS) $(LDFLAGS) -o $@
 	@echo "    SZ      "$@
